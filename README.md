@@ -10,7 +10,7 @@ Additionally, a log file is created every day with logs of outgoing requests(opt
 DOWNLOADING AND INSTALLING PYTHON:
 1.	Go to https://www.python.org/downloads/
 2.	Download the latest version of python available:
- (snapshots/python-download.png)
+ (./snapshots/python-download.png)
 3.	A setup file will be downloaded, which when run will be an easy self-guided installation.
 4.	Remember the directory in which python is installed, since it needs to be run with the complete path while executing a python script.
 5.	From here on, python directory would refer to the python installation path:
