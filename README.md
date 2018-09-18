@@ -10,7 +10,9 @@ Additionally, a log file is created every day with logs of outgoing requests(opt
 DOWNLOADING AND INSTALLING PYTHON:
 1.	Go to https://www.python.org/downloads/
 2.	Download the latest version of python available:
- (./snapshots/python-download.png)
+ 
+ ![python download image](./snapshots/python-download.png)
+ 
 3.	A setup file will be downloaded, which when run will be an easy self-guided installation.
 4.	Remember the directory in which python is installed, since it needs to be run with the complete path while executing a python script.
 5.	From here on, python directory would refer to the python installation path:
@@ -19,13 +21,17 @@ DOWNLOADING AND INSTALLING PYTHON:
 python -m pip install requests
 7.	If the library is already installed, it will give the below messages, otherwise, it will add the library in your python installation.
  
-
+![install requests package](./snapshots/requests-install.png)
 
 
 CONFIGURATIONS:
 Delivered folder contains below files:
  
+ ![file list](./snapshots/File-list.png)
+ 
  ‘pairs.csv’ is the configuration file which needs to be populated before running the script. Please do not rename it or add any additional columns.
+ 
+ ![configurations](./snapshots/Configs.png)
  
 Column A(Pairs):
 It needs to be populated with ‘/’ separated currency combinations, with exactly one combination in each cell, starting from A2.
@@ -45,28 +51,30 @@ RUNNING THE SCRIPT:
 
 Path_to_python_directory\python.exe get-trade-data-new.py
 
+![run using python command](./snapshots/Python-run.png)
  
 
 For background, just replace python.exe with pythonw.exe
  
+![run using pythonw](./snapshots/Pythonw-run.png) 
 
 3.	For foreground, a message saying log ‘directory created successfully’ will appear on the screen and the script will start processing. If the log directory already exists, it will show the message ‘Problem creating log directory!’, which just shows that directory already exists and will continue execution.
 4.	Everything else will now be logged in a file named date_logs.txt inside folder logs created in the main files’ directory.
 5.	Output files will be created in ‘output’ folder in the same directory, in the pattern mentioned in the introductory note above.
 6.	Do not run the script again, if the script is already running. Whether the script is already running or not can be insured by checking the update time for log file or output file. For 50 records as loginterval, file is updated approximately every 3-4 minutes apart. Time of update is proportional to loginterval, hence can be estimated accordingly, if you decide to change it from 50.
 
- 
+ ![log file](./snapshots/logs.png)
 
 7.	You can also check if the script is running, using cmd. From anywhere in cmd, type the command tasklist, and a complete list of all the running tasks will appear. You can look for ‘python.exe’ or ‘pythonw.exe’ in the list, which will signify that the script is running. Please note, that if there are multiple python scripts running in the background, there will be one entry for each running script in the tasklist, and hence it would be impossible to tell them apart using this method.
 
- 
-
+ ![run tasklist utility](./snapshots/terminate1.png)
+ ![run tasklist utility](./snapshots/terminate2.png)
    
 
 8.	To terminate the script, use below command in cmd:
 
 Taskkill /PID 18288 /F
 
- 
+ ![Kill the task](./snapshots/terminate3.png)
 
 The number after PID represents the process ID for your script and can be found from the tasklist above(highlighted).
